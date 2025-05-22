@@ -4,12 +4,14 @@
 VERDE='\033[1;32m'
 AMARELO='\033[1;33m'
 AZUL='\033[1;34m'
+AZUL_CLARO="\e[96m"
+ROXO_CLARO="\e[95m"
 NEUTRO='\033[0m'
 NEGRITO='\033[1m'
 
 clear
-# Banner estilo BIG
-echo -e "${VERDE}"
+# Banner Ascii
+echo -e "${AZUL_CLARO}"
 echo "             _    _   _______    ____   __          __             ______  _    _   _    _ "
 echo "     /\     | |  | | |__   __|  / __ \  \ \        / /     /\     |___  / | |  | | | |  | |"
 echo "    /  \    | |  | |    | |    | |  | |  \ \  /\  / /     /  \       / /  | |  | | | |__| |"
@@ -31,7 +33,7 @@ chmod +x "$INSTALLER_FILE"
 echo -e "${VERDE}\n✅ Concluído!${NEUTRO}"
 
 # Instalação
-echo -e "\n${AMARELO}⚙️ Iniciando instalação do Wazuh (isso pode levar alguns minutos)... Aguarde...${NEUTRO}"
+echo -e "\n${AMARELO}📦 Iniciando instalação do Wazuh (isso pode levar alguns minutos)... {ROXO_CLARO}Aguarde...${NEUTRO}"
 bash "$INSTALLER_FILE" -a > "$LOGFILE" 2>&1
 echo -e "${VERDE}✅ Concluído!${NEUTRO}"
 
@@ -45,9 +47,9 @@ echo -e "User: $USER\nPassword: $PASS" > token.txt
 
 # Exibir resultado
 echo -e "\n${AMARELO}🔐 Acesso ao Wazuh Dashboard:${NEUTRO}"
-echo -e "${AMARELO}URL: ${AZUL}https://${IP}:443${NEUTRO}"
-echo -e "${AMARELO}User: ${AZUL}${USER}${NEUTRO}"
-echo -e "${AMARELO}Password: ${AZUL}${PASS}${NEUTRO}"
+echo -e "${AMARELO}URL: ${AZUL_CLARO}https://${IP}:443${NEUTRO}"
+echo -e "${AMARELO}User: ${AZUL_CLARO}${USER}${NEUTRO}"
+echo -e "${AMARELO}Password: ${AZUL_CLARO}${PASS}${NEUTRO}"
 
-echo -e "\n${AMARELO}📝 Credenciais salvas em ${AZUL}$(realpath token.txt)${NEUTRO}"
-echo -e "${AMARELO}📄 Log completo disponível em ${AZUL}$(realpath $LOGFILE)${NEUTRO}\n"
+echo -e "\n${AMARELO}📝 Credenciais salvas em ${AZUL_CLARO}$(realpath token.txt)${NEUTRO}"
+echo -e "${AMARELO}📄 Log completo disponível em ${AZUL_CLARO}$(realpath $LOGFILE)${NEUTRO}\n"
