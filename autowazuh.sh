@@ -33,7 +33,7 @@ chmod +x "$INSTALLER_FILE"
 echo -e "${VERDE}\n✅ Concluído!${NEUTRO}"
 
 # Instalação
-echo -e "\n${AMARELO}📦 Iniciando instalação do Wazuh (isso pode levar alguns minutos)... {ROXO_CLARO}Aguarde...${NEUTRO}"
+echo -e "\n${AMARELO}📦 Iniciando instalação do Wazuh (isso pode levar alguns minutos)... ${ROXO_CLARO}Aguarde...${NEUTRO}"
 bash "$INSTALLER_FILE" -a > "$LOGFILE" 2>&1
 echo -e "${VERDE}✅ Concluído!${NEUTRO}"
 
