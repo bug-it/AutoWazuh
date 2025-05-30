@@ -104,11 +104,11 @@ systemctl restart wazuh-manager &>/dev/null
 status
 
 # Salvar credenciais em arquivo
-echo -e "User: $USER\nPassword: $NOVA_SENHA" > token.txt
+echo -e "User: $USER Password: $NOVA_SENHA" > token.txt
 
 # Caminhos finais
-echo -e "\n${AMARELO}📝 Credenciais salvas em ${AZUL_CLARO}$(realpath token.txt)${NC}"
-echo -e "${AMARELO}📄 Log completo disponível em ${AZUL_CLARO}$(realpath $LOGFILE)${NC}\n"
+echo -e "${AMARELO}📝 Credenciais salvas em ${AZUL_CLARO}$(realpath token.txt)${NC}"
+echo -e "${AMARELO}📄 Log completo disponível em ${AZUL_CLARO}$(realpath $LOGFILE)${NC}"
 
 echo -e "\n${AMARELO}🔐 Acesso ao Wazuh Dashboard:${NC}"
 echo -e "${AMARELO}URL: ${AZUL_CLARO}https://${IP}:443${NC}"
