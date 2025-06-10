@@ -23,7 +23,7 @@
 📂 <b>Como Utilizar</b>
 
 ```bash
-git clone https://github.com/SEU-USUARIO/autowazuh.git
+git clone https://github.com/bug-it/autowazuh.git
 cd autowazuh
 chmod +x autowazuh.sh
 sudo ./autowazuh.sh
